@@ -2,16 +2,30 @@ package es.upsa.papps.cervantes;
 
 public class Reservas {
 
-
+    private String id;
     private String nombre;
-    private String telefono;
-    private String email;
+    private int numeroDePersonas;
+    private String fecha;
+    private String hora;
 
-    public Reservas(String nombre, String telefono, String email) {
+    // Constructor con todos los campos necesarios
+    public Reservas(String id, String nombre, int numeroDePersonas, String fecha, String hora) {
+        this.id = id;
         this.nombre = nombre;
-        this.telefono = telefono;
-        this.email = email;
+        this.numeroDePersonas = numeroDePersonas;
+        this.fecha = fecha;
+        this.hora = hora;
     }
+
+    // Getters y setters para cada campo
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -20,19 +34,27 @@ public class Reservas {
         this.nombre = nombre;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public int getNumeroDePersonas() {
+        return numeroDePersonas;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setNumeroDePersonas(int numeroDePersonas) {
+        this.numeroDePersonas = numeroDePersonas;
     }
 
-    public String getEmail() {
-        return email;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
     }
 }
